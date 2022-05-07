@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- ------ boxicon---------  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ---------- style.css ----------  -->
+    <link rel="stylesheet" href="style.css">
+ <title>Our agriventure farm</title> 
+</head>
+<style>
+:root {
+    --footer-color: #0f1b28;
+    --main-color: #ffb11f;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+}
+
+
+/* ---------- navbar ----------  */
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar {
+    transition: 0.9s;
+}
+
+
+/* -------- create sticky navbar ------  */
+
+.sticky {
+    background-color: var(--footer-color) !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media(max-width:767px) {
+    .bg {
+        text-align: center;
+        background-color: var(--footer-color);
+    }
+}
+
+
+/* -------------- home section ----------------  */
+
+.hero {
+    background-image: url('images.jpeg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url('images.jpeg');
+}
+
+
+.hero .content h1 {
+    font-size: clamp(27px, 5vw, 90px);
+}
+
+.hero .content p {
+    font-size: 1.3rem;
+    max-width: 768px;
+}
+
+.button {
+    padding: 13px 49px;
+    background: var(--main-color);
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    position: relative;
+}
+
+button {
+    border: none
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: scalex(0);
+    transform-origin: 100% 50%;
+    border-radius: 3px;
+    background-color: var(--footer-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+.button .txt {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: medium;
+}
+
+.button:hover::after {
+    transform: scale(1);
+    transform-origin: 0% 50%;
+}
+
+@media(max-width:768px) {
+    html {
+        font-size: 80.5% !important;
+    }
+}
+
+
+/* --------- benefit-----------  */
+
+.benefit {
+    position: relative;
+    height: auto;
+}
+
+.benefit .img1 {
+    width: 200px;
+    height: 200px;
+    transform: rotate(266deg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 12px;
+}
+
+.benefit .img2 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.benefit .img img {
+    width: 120px;
+}
+
+
+/* ----------- about section ------  */
+
+.about {<body>
+<p>
+<img src="C:\Users\New\Documents\agri\puyat.jpg.jpg">
+
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
+</p>
+</body>
+}
+
+.about .wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 100vh;
+    color : red;
+}
+
+.about .wraper h2 {
+    color: black}
+
+.about .wraper p {
+    color: black
+}
+
+
+/* ----------- gallery -----------  */
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery .inner {
+    position: relative;
+    z-index: 3;
+}
+
+.gallery .inner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.gallery .inner .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    color: white;
+    opacity: 0;
+}
+
+.gallery .inner .text p {
+    font-size: 3rem;
+}
+
+.gallery .inner:hover::after {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.gallery .inner:hover .text {
+    opacity: 1;
+}
+
+.gallery .inner img {
+    align-self: normal
+}
+
+
+/* -------- team -----------  */
+
+.team img {
+    width: 100%;
+}
+
+.team img {
+    clip-path: circle();
+}
+
+
+/* --------- fruit -----------  */
+
+.fruit img {
+    width: 100%;
+}
+
+.fruit {
+    background: #f5edd6
+}
+
+.fruit h2 {
+    color: var(--main-color)
+}
+
+
+/* ----------- blog ---------  */
+
+.blog .wraper img {
+    width: 100%;
+}
+
+.blog .parent {
+    position: relative;
+    width: 100%;
+    padding-top: 85%;
+}
+
+.blog .parent .wraper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+
+
+/* ---------- footer ----------  */
+
+footer {
+    background-color: var(--footer-color);
+    color: black;
+}
+
+footer span:nth-child(2) {
+    color: var(--main-color)
+}
+
+</style>
+
+<body>
+
+    <!-- -------- navbar--------  -->
+    <nav class="navbar navbar-expand-md scroll fixed-top ">
+        <div class="container">
+
+            <a class="navbar-brand text-pink" href="#">OUR AGRIVENTURE FARM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class='bx bx-menu bx-md text-white'></i>
+          </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto bg">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#benefit">Benefit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#gallery">Gallery</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#blog">Blog</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------- home section --------  -->
+    <section>
+
+        <div class="hero" id="home">
+            <div class="content text-white">
+                <h1 class="mb-3 text-uppercase"> OUR AGRIVENTURE FARM </h1>
+                <p class="text-center m-2">Our farm will give you an enjoyable Adventures</p>
+                <button class="button">
+                    <span class="txt">Discover</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- --------- benefits-----------  -->
+    <section>
+        <div class="benefit" id="benefit">
+            <div class=" d-none d-xl-block">
+ <body style="background-color:pink;">            
+<img src="agri/puyat.jpg />
+                
+            </div>
+            <div class="container mt-5">
+                <h2 class="text-center"> BENEFITS </h2>
+                <p class="w-75 m-auto text-center mt-3 mb-3"></p>
+                <div class="row mt-5">
+                    <div class=" col-lg-4 col-md-6 col-sm-6  col-12 p-3 mb-4">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="content w-75">
+                                <h4>Fresh Vegetables</h4>
+                             <p>A diet rich in vegetables and fruits can lower blood pressure, reduce the risk of heart disease and stroke, prevent some types of cancer, lower risk of eye and digestive problems, and have a positive effect upon blood sugar, which can help keep appetite in check.</p>
+                            </div>
+                            <div class="img">
+                                <img src="img/benefit1.webp" alt="benefit1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-lg-4 col-md-6 col-sm-6  col-12 p-3 mb-4">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="content w-75">
+                                <h4>Natural Honey</h4>
+                                <p>Raw honey has been used as a remedy throughout history and has a variety of health benefits and medical uses. It’s even used in some hospitals as a treatment for wounds. Many of these health benefits are specific to raw, or unpasteurized, honey.</p>
+                            </div>
+                            <div class="img">
+                                <img src="img/benefit2.webp" alt="benefit2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6  col-12 p-3 mb-4">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="content w-75">
+                                <h4>Fresh Fruit</h4>
+                                <p>Fruits are an excellent source of essential vitamins and minerals, and they are high in fiber. Fruits also provide a wide range of health-boosting antioxidants, including flavonoids. Eating a diet high in fruits and vegetables can reduce a person's risk of developing heart disease, cancer, inflammation, and diabetes.</p>
+                            </div>
+                            <div class="img">
+                                <img src="img/benefit3.webp" alt="benefit3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6  col-12 p-3 mb-4">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="content w-75">
+                                <h4> Wheats</h4>
+                                <p>The powerful health benefits of wheat may include its ability to control obesity, boost energy, inhibit type 2 diabetes, improve metabolism, and prevent asthma and gallstones.</p>
+                            </div>
+                            <div class="img">
+                                <img src="img/benefit4.webp" alt="benefit4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6  col-12 p-3 mb-4">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="content w-75">
+                                <h4>Different Livestock</h4>
+                                <p>The livestock species play very important economic and socio-cultural roles for the wellbeing of rural households, such as food supply, source of income, asset saving, source of employment, soil fertility, livelihoods, transport, agricultural traction, agricultural diversification and sustainable agricultural</p>
+                            </div>
+                            <div class="img">
+                                <img src="img/benefit5.webp" alt="benefit5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6 col-12 p-3 mb-4">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="content w-75">
+                                <h4>Agro Machinery</h4>
+                                <p>Mechanization can significantly bring down the cost of labor, particularly for labor-intensive crops such as rice, corn, and sugar. These equipment and mechanized procedures will definitely increase production.</p>
+                            </div>
+                            <div class="img">
+                                <img src="img/benefit6.webp" alt="benefit6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ----------- about section----------  -->
+    <section class="about" id="about">
+        <div class="wraper">
+            <div class="content">
+               <div class=" col-lg-4 col-md-6 col-sm-6  col-12 p-3 mb-4">
+                        <div class="d-flex align-items-center justify-content-center">
+                  <p class= "w-75">
+ <button class="button">
+                    <span class="txt">About us</span>
+                </button>
+                
+                </div>
+  
+ <p> Welcome to our Webpage, Your number one source for all the things about agriculture. We're dedicated to providing you the best products especially the machinary you need in farming.</p>
+
+ <p>Founded in 2022 by the group of Erol our agriculture has a long way from its beginning in Sta.Cruz. When our group started out, our passion for farming drove us to start our own business.</p>
+
+ <p>We hope you enjoy our products as much as we enjoy offering this to you. If you have any questions or comments, Please dont hesitate to contact us.</p>
+</div>
+</div>
+</button>
+            </div>
+        </div>
+    </section>
+    <!-- ----------- gallery ------------  -->
+    <section class="gallery" id="gallery">
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>Agriculture farm organic products</h2>
+                   
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-4 col-md-3 col-sm-6 col-12 mb-3 d-flex">
+                    <div class="inner d-flex">
+                        <img src="img/g1.webp" alt="g1">
+                        <div class="text">
+                            <p>fruit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-6 col-12 mb-3 d-flex">
+                    <div class="inner d-flex">
+                        <img src="img/g2.webp" alt="g2">
+                        <div class="text">
+                            <p>Machine</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-6 col-12 mb-3 d-flex ">
+                    <div class="inner d-flex">
+                        <img src="img/g3.webp" alt="g3">
+                        <div class="text">
+                            <p>Honey</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-6 col-12 mb-3">
+                    <div class="inner">
+                        <img src="img/g4.webp" alt="g4">
+                        <div class="text">
+                            <p>sheep</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-6 col-12 mb-3">
+                    <div class="inner">
+                        <img src="img/g5.webp" alt="g5">
+                        <div class="text">
+                            <p>Rice</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-6 col-12 mb-3 d-flex">
+                    <div class="inner d-flex">
+                        <img src="img/g6.webp" alt="g6">
+                        <div class="text">
+                            <p>Fruits</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-6 col-12 mb-3">
+                    <div class="inner">
+                        <img src="img/g7.webp" alt="g7">
+                        <div class="text">
+                            <p>Chicken</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-6 col-12 mb-3 d-flex">
+                    <div class="inner d-flex">
+                        <img src="img/g8.webp" alt="g8">
+                        <div class="text">
+                            <p>Cabbage</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-6 col-12 mb-3 d-flex">
+                    <div class="inner d-flex">
+                        <img src="img/g9.webp" alt="g9">
+                        <div class="text">
+                            <p>Cow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+   
+  
+    <!-- ----------- blog ------------  -->
+    <section class="blog" id="blog">
+        <div class="container text-center my-5">
+            <div class="row mb-5">
+                <div class="col-md-4 col-sm-6 col-12 p-4">
+                    <div class="parent">
+                        <div class="wraper">
+                            <img src="img/blog1.webp" alt="blog1">
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Benefit of a raw food for your health</h3>
+                        <button class="button">
+                            <span class="txt">Read more</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 p-4">
+                    <div class="parent">
+                        <div class="wraper">
+                            <img src="img/blog2.webp" alt="blog2">
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Tips for ripenimg your fruits & vegetable</h3>
+                        <button class="button">
+                            <span class="txt">Read more</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 p-4">
+                    <div class="parent">
+                        <div class="wraper">
+                            <img src="img/blog3.webp" alt="blog3">
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Super foods you should be eating for health</h3>
+                        <button class="button">
+                            <span class="txt">Read more</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
